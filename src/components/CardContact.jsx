@@ -2,16 +2,17 @@
 export const CardContact = () => {
 
     return (
-        <div className="card mb-3" style={{maxWidth: "540px"}}>
+        <div className="card mb-3" style={{margin:"10px"}}>
             <div className="row g-0">
                 <div className="col-md-4">
-                    <img src="..." className="img-fluid rounded-start" alt="..."/>
+                    <img src="https://files.jotform.com/jotformapps/fa7716f93e1a40894d4ea2ab704842d1.png" className="img-fluid rounded-start" />
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title">Nombre Contacto</h5>
-                        <p className="card-text">Teléfono</p>
-                        <p className="card-text"><small className="text-body-secondary">Email</small></p>
+                        <h5 className="card-title">Contact Name</h5>
+                        <p className="card-text">Phone</p>
+                        <p className="card-text">Email</p>
+                        <p className="card-text">Address</p>
                     </div>
                 </div>
             </div>
