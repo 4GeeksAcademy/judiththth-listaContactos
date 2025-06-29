@@ -5,7 +5,9 @@ export const CardContact = () => {
         <div className="card mb-3" style={{margin:"10px"}}>
             <div className="row g-0">
                 <div className="col-md-4">
-                    <img src="https://files.jotform.com/jotformapps/fa7716f93e1a40894d4ea2ab704842d1.png" className="img-fluid rounded-start" />
+                    <img src="https://files.jotform.com/jotformapps/fa7716f93e1a40894d4ea2ab704842d1.png"
+                    className="img-fluid rounded-start"
+                    style={{ maxHeight: "200px", objectFit: "contain", margin: "5px" }} />
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
