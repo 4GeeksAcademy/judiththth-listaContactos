@@ -1,5 +1,5 @@
 
-export const CardContact = () => {
+export const CardContact = ({name, phone, address, email}) => {
 
     return (
         <div className="card mb-3" style={{margin:"10px"}}>
@@ -11,7 +11,7 @@ export const CardContact = () => {
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title">Contact Name</h5>
+                        <h5 className="card-title">{name}</h5>
                         <p className="card-text">Phone</p>
                         <p className="card-text">Email</p>
                         <p className="card-text">Address</p>

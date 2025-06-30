@@ -1,5 +1,22 @@
 export const FormNewContact = () => {
 
+function addContact() {
+    // fetch fetch("https://playground.4geeks.com/contact/agendas/Judith", { method: "POST" })
+        // fetch("https://playground.4geeks.com/contact/agendas/Judith", { method: "GET" })
+		// 	.then(resp => {
+		// 		console.log(resp.ok);
+		// 		console.log(resp.status);
+		// 		return resp.json();
+		// 	})
+		// 	.then((data) => {
+		// 		console.log(data.contacts)
+		// 		setList(data.contacts)
+		// 	})
+		// 	.catch((error) => console.log(error))
+		// 	}
+
+}
+
     return (
 
         <div style={{margin: "15px"}}>
