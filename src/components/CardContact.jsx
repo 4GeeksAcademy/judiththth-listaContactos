@@ -12,9 +12,9 @@ export const CardContact = ({name, phone, address, email}) => {
                 <div className="col-md-8">
                     <div className="card-body">
                         <h5 className="card-title">{name}</h5>
-                        <p className="card-text">Phone</p>
-                        <p className="card-text">Email</p>
-                        <p className="card-text">Address</p>
+                        <p className="card-text">{phone}</p>
+                        <p className="card-text">{email}</p>
+                        <p className="card-text">{address}</p>
                     </div>
                 </div>
             </div>

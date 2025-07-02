@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import React, {useState, useEffect} from "react";
 
 
-
 export const Home = () => {
 
 	const [contact, setContact] = useState("");
@@ -11,7 +10,7 @@ export const Home = () => {
 	const [list, setList] = useState([]);
 
 	function getContactList() {
-		fetch("https://playground.4geeks.com/contact/agendas/Judith", { method: "GET" })
+		fetch("https://playground.4geeks.com/contact/agendas/judith/contacts", { method: "GET" })
 			.then(resp => {
 				console.log(resp.ok);
 				console.log(resp.status);
@@ -23,11 +22,12 @@ export const Home = () => {
 			})
 			.catch((error) => console.log(error))
 			}
-	
 
+			
 useEffect(() => {
 	getContactList()
 }, []);
+
 
 return (
 	<div className="text-center m-5">
@@ -37,7 +37,7 @@ return (
 		</div>
 
 		{list.map((item) => (
-			<CardContact name={item.name}/>
+			<CardContact name={item.name} phone={item.phone} email={item.email} address={item.address}/>
 		))}
 
 	</div>
