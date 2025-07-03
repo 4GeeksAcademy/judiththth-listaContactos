@@ -1,5 +1,5 @@
 
-export const CardContact = ({name, phone, address, email}) => {
+export const CardContact = ({name, phone, address, email, onDelete}) => {
 
     return (
         <div className="card mb-3" style={{margin:"10px"}}>
@@ -11,7 +11,7 @@ export const CardContact = ({name, phone, address, email}) => {
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
-                        <h5 className="card-title">{name}</h5>
+                        <h5 className="card-title">{name}<span><button onClick={onDelete} className="btn btn-secondary">Borrar</button></span></h5>
                         <p className="card-text">{phone}</p>
                         <p className="card-text">{email}</p>
                         <p className="card-text">{address}</p>

@@ -7,8 +7,10 @@ export const FormNewContact = () => {
     const [email, setEmail] = useState("")
     const [address, setAddress] = useState("")
 
-    function addContact() {
-        fetch("https://playground.4geeks.com/contact/agendas/judith",
+   
+    function addContact(e) {
+        e.preventDefault()
+        fetch("https://playground.4geeks.com/contact/agendas/judith/contacts",
             {
                 method: "POST", body: JSON.stringify({
                     name: name,
@@ -26,8 +28,8 @@ export const FormNewContact = () => {
                 return resp.json();
             })
             .then((data) => {
-                console.log(data.contacts)
-                setList(data.contacts)
+                console.log(data)
+                alert("Contacto añadido")
             })
             .catch((error) => console.log(error))
     }
@@ -41,25 +43,25 @@ export const FormNewContact = () => {
 
             <div className="mb-3">
                 <label htmlFor="exampleFormControlInput1" className="form-label">Full Name</label>
-                <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Name Lastname" onChange={(event) => setName(event.target.value)} />
+                <input type="text" className="form-control" value={name} placeholder="Name Lastname" onChange={(event) => setName(event.target.value)} />
 
             </div>
 
             <div className="mb-3">
                 <label htmlFor="exampleFormControlInput1" className="form-label">Email</label>
-                <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="name@example.com" onChange={(event) => setEmail(event.target.value)} />
+                <input type="email" className="form-control" value={email} placeholder="name@example.com" onChange={(event) => setEmail(event.target.value)} />
 
             </div>
 
             <div className="mb-3">
                 <label htmlFor="exampleFormControlInput1" className="form-label">Phone</label>
-                <input type="number" className="form-control" id="exampleFormControlInput1" placeholder="+34 XXX XXX XXX" onChange={(event) => setPhone(event.target.value)} />
+                <input type="number" className="form-control" value={phone} placeholder="+34 XXX XXX XXX" onChange={(event) => setPhone(event.target.value)} />
 
             </div>
 
             <div className="mb-3">
                 <label htmlFor="exampleFormControlInput1" className="form-label">Address</label>
-                <input type="text" className="form-control" id="exampleFormControlInput1" placeholder="Example Street, XX. ZIP CODE, City" onChange={(event) => setAddress(event.target.value)} />
+                <input type="text" className="form-control" value={address} placeholder="Example Street, XX. ZIP CODE, City" onChange={(event) => setAddress(event.target.value)} />
 
             </div>
 
