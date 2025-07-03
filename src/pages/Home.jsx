@@ -5,8 +5,6 @@ import React, {useState, useEffect} from "react";
 
 export const Home = () => {
 
-	const [contact, setContact] = useState("");
-
 	const [list, setList] = useState([]);
 
 	function getContactList() {
