@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 export const FormNewContact = () => {
 
@@ -7,7 +7,7 @@ export const FormNewContact = () => {
     const [email, setEmail] = useState("")
     const [address, setAddress] = useState("")
 
-   
+
     function addContact(e) {
         e.preventDefault()
         fetch("https://playground.4geeks.com/contact/agendas/judith/contacts",
@@ -29,15 +29,19 @@ export const FormNewContact = () => {
             })
             .then((data) => {
                 console.log(data)
+                setName("");
+                setPhone("");
+                setEmail("");
+                setAddress("");
                 alert("Contacto añadido")
             })
             .catch((error) => console.log(error))
     }
 
     return (
-               
 
-        <form style={{ margin: "15px" }} onSubmit={addContact}> 
+
+        <form style={{ margin: "15px" }} onSubmit={addContact}>
 
             <h1 className="text-center">New Contact</h1>
 
